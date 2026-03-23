@@ -1,0 +1,170 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:registration_name",
+ "creation": "2026-03-23 19:47:22.045936",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "registration_name",
+  "registration_number",
+  "pan",
+  "valid_from",
+  "status",
+  "order_copy",
+  "last_renewal_date",
+  "responsible_user",
+  "column_break_twjr",
+  "organization_name",
+  "registration_type",
+  "approval_date",
+  "valid_upto",
+  "issuing_authority",
+  "order_reference",
+  "renewal_reminder_days",
+  "next_action_date",
+  "section_break_xute",
+  "notes"
+ ],
+ "fields": [
+  {
+   "description": "Example 80G FY2026",
+   "fieldname": "registration_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Registration Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "registration_type",
+   "fieldtype": "Select",
+   "label": "Registration Type",
+   "options": "12AB\n80G",
+   "reqd": 1
+  },
+  {
+   "fieldname": "registration_number",
+   "fieldtype": "Data",
+   "label": "Registration Number",
+   "reqd": 1
+  },
+  {
+   "description": "NGO legal name",
+   "fieldname": "organization_name",
+   "fieldtype": "Data",
+   "label": "Organization Name",
+   "reqd": 1
+  },
+  {
+   "description": "NGO PAN",
+   "fieldname": "pan",
+   "fieldtype": "Data",
+   "label": "PAN",
+   "reqd": 1
+  },
+  {
+   "fieldname": "approval_date",
+   "fieldtype": "Date",
+   "label": "Approval Date"
+  },
+  {
+   "fieldname": "valid_from",
+   "fieldtype": "Date",
+   "label": "Valid From"
+  },
+  {
+   "fieldname": "valid_upto",
+   "fieldtype": "Date",
+   "label": "Valid Upto"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nActive\nExpired\nSuspended\nRenewal In Process",
+   "reqd": 1
+  },
+  {
+   "fieldname": "issuing_authority",
+   "fieldtype": "Data",
+   "label": "Issuing Authority"
+  },
+  {
+   "fieldname": "order_reference",
+   "fieldtype": "Data",
+   "label": "Order Reference"
+  },
+  {
+   "description": "PDF attachment",
+   "fieldname": "order_copy",
+   "fieldtype": "Attach",
+   "label": "Order Copy"
+  },
+  {
+   "fieldname": "renewal_reminder_days",
+   "fieldtype": "Int",
+   "label": "Renewal Reminder Days",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "last_renewal_date",
+   "fieldtype": "Date",
+   "label": "Last Renewal Date"
+  },
+  {
+   "fieldname": "next_action_date",
+   "fieldtype": "Date",
+   "label": "Next Action Date"
+  },
+  {
+   "fieldname": "responsible_user",
+   "fieldtype": "Link",
+   "label": "Responsible User",
+   "options": "User"
+  },
+  {
+   "fieldname": "section_break_xute",
+   "fieldtype": "Section Break"
+  },
+  {
+   "description": "Internal comments",
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "column_break_twjr",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-03-23 20:09:09.275554",
+ "modified_by": "Administrator",
+ "module": "Handle Me",
+ "name": "Tax Exemption Registration",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

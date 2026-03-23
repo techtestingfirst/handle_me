@@ -1,0 +1,190 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-03-23 22:45:08.358377",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "financial_year",
+  "filing_status",
+  "column_break_sfkn",
+  "fcra_registration",
+  "acknowledgement_no",
+  "due_date",
+  "filing_date",
+  "section_break_kmgt",
+  "nil_return",
+  "total_foreign_receipts",
+  "administrative_expenses",
+  "total_utilization",
+  "column_break_tays",
+  "prepared_by",
+  "reviewed_by",
+  "bank_statement_attachment",
+  "audit_attachment",
+  "return_attachment",
+  "section_break_kpej",
+  "notes",
+  "column_break_fsqn",
+  "error_log"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Naming Series",
+   "options": "FC4-.FY.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "financial_year",
+   "fieldtype": "Link",
+   "label": "Financial Year",
+   "options": "Fiscal Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fcra_registration",
+   "fieldtype": "Link",
+   "label": "FCRA Registration",
+   "options": "FCRA Registration",
+   "reqd": 1
+  },
+  {
+   "fieldname": "filing_status",
+   "fieldtype": "Select",
+   "label": "Filing Status",
+   "options": "Draft\nPrepared\nUnder Audit\nReady to File\nFiled\nRevised\nNil Return Filed",
+   "reqd": 1
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "label": "Due Date"
+  },
+  {
+   "fieldname": "filing_date",
+   "fieldtype": "Date",
+   "label": "Filing Date"
+  },
+  {
+   "fieldname": "acknowledgement_no",
+   "fieldtype": "Data",
+   "label": "Acknowledgement No"
+  },
+  {
+   "fieldname": "total_foreign_receipts",
+   "fieldtype": "Currency",
+   "label": "Total Foreign Receipts",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "total_utilization",
+   "fieldtype": "Currency",
+   "label": "Total Utilization",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "administrative_expenses",
+   "fieldtype": "Currency",
+   "label": "Administrative Expenses"
+  },
+  {
+   "default": "0",
+   "fieldname": "nil_return",
+   "fieldtype": "Check",
+   "label": "Nil Return"
+  },
+  {
+   "fieldname": "audit_attachment",
+   "fieldtype": "Attach",
+   "label": "Audit Attachment"
+  },
+  {
+   "fieldname": "return_attachment",
+   "fieldtype": "Attach",
+   "label": "Return Attachment"
+  },
+  {
+   "fieldname": "bank_statement_attachment",
+   "fieldtype": "Attach",
+   "label": "Bank Statement Attachment"
+  },
+  {
+   "fieldname": "prepared_by",
+   "fieldtype": "Link",
+   "label": "Prepared By",
+   "options": "User"
+  },
+  {
+   "fieldname": "reviewed_by",
+   "fieldtype": "Link",
+   "label": "Reviewed By",
+   "options": "User"
+  },
+  {
+   "fieldname": "section_break_kpej",
+   "fieldtype": "Section Break"
+  },
+  {
+   "description": "Internal remarks",
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "description": "Validation/import issues",
+   "fieldname": "error_log",
+   "fieldtype": "Small Text",
+   "label": "Error Log"
+  },
+  {
+   "fieldname": "column_break_sfkn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_kmgt",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_tays",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_fsqn",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-03-23 22:57:32.176886",
+ "modified_by": "Administrator",
+ "module": "Handle Me",
+ "name": "FCRA Return Batch",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

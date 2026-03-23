@@ -1,0 +1,272 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-03-23 19:08:06.340336",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "erpnext_donor",
+  "donation_intent",
+  "donor_profile",
+  "pan_number",
+  "column_break_jlhc",
+  "receipt_date",
+  "donor_name",
+  "erpnext_donation",
+  "email",
+  "section_break_ghos",
+  "fund",
+  "amount",
+  "payment_mode",
+  "receipt_type",
+  "column_break_umjj",
+  "program",
+  "currency",
+  "payment_reference",
+  "section_break_fxdv",
+  "is_80g_eligible",
+  "80g_registration_no",
+  "ngo_pan",
+  "receipt_pdf",
+  "column_break_hlrk",
+  "sent_by_email",
+  "email_sent_on",
+  "status",
+  "section_break_nlxx",
+  "remarks",
+  "column_break_gplh",
+  "cancellation_reason",
+  "section_break_s4tx",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_s4tx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Donation Receipt",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Naming Series",
+   "options": "REC-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "receipt_date",
+   "fieldtype": "Date",
+   "label": "Receipt Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "donation_intent",
+   "fieldtype": "Link",
+   "label": "Donation Intent",
+   "options": "Donation Intent"
+  },
+  {
+   "fieldname": "erpnext_donation",
+   "fieldtype": "Link",
+   "label": "ERPNext Donation",
+   "options": "Donation"
+  },
+  {
+   "fieldname": "donor_profile",
+   "fieldtype": "Link",
+   "label": "Donor Profile",
+   "options": "NGO Donor Profile",
+   "reqd": 1
+  },
+  {
+   "fieldname": "erpnext_donor",
+   "fieldtype": "Link",
+   "label": "ERPNext Donor",
+   "options": "Donor",
+   "reqd": 1
+  },
+  {
+   "fieldname": "donor_name",
+   "fieldtype": "Data",
+   "label": "Donor Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "pan_number",
+   "fieldtype": "Data",
+   "label": "PAN Number"
+  },
+  {
+   "fieldname": "program",
+   "fieldtype": "Link",
+   "label": "Program",
+   "options": "NGO Program"
+  },
+  {
+   "fieldname": "fund",
+   "fieldtype": "Link",
+   "label": "Fund",
+   "options": "NGO Fund"
+  },
+  {
+   "fieldname": "column_break_jlhc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_ghos",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Amount",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_umjj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "payment_mode",
+   "fieldtype": "Select",
+   "label": "Payment Mode",
+   "options": "Online\nUPI\nBank Transfer\nCheque\nCash\nCard",
+   "reqd": 1
+  },
+  {
+   "fieldname": "payment_reference",
+   "fieldtype": "Data",
+   "label": "Payment Reference"
+  },
+  {
+   "fieldname": "receipt_type",
+   "fieldtype": "Select",
+   "label": "Receipt Type",
+   "options": "Normal\nProvisional\nRevised\nCancelled",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_fxdv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_80g_eligible",
+   "fieldtype": "Check",
+   "label": "Is 80G Eligible"
+  },
+  {
+   "fieldname": "80g_registration_no",
+   "fieldtype": "Data",
+   "label": "80G Registration No"
+  },
+  {
+   "fieldname": "ngo_pan",
+   "fieldtype": "Data",
+   "label": "NGO PAN",
+   "reqd": 1
+  },
+  {
+   "fieldname": "receipt_pdf",
+   "fieldtype": "Attach",
+   "label": "Receipt PDF"
+  },
+  {
+   "default": "0",
+   "fieldname": "sent_by_email",
+   "fieldtype": "Check",
+   "label": "Sent by Email"
+  },
+  {
+   "fieldname": "email_sent_on",
+   "fieldtype": "Datetime",
+   "label": "Email Sent On"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nIssued\nCancelled",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_nlxx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "cancellation_reason",
+   "fieldtype": "Small Text",
+   "label": "Cancellation Reason"
+  },
+  {
+   "fieldname": "column_break_gplh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Internal notes",
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "column_break_hlrk",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-03-23 20:29:45.888283",
+ "modified_by": "Administrator",
+ "module": "Handle Me",
+ "name": "Donation Receipt",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,254 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:full_name",
+ "creation": "2026-03-22 23:57:59.013270",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "user",
+  "full_name",
+  "email",
+  "pan_number",
+  "date_of_birth",
+  "column_break_exlw",
+  "portal_enabled",
+  "donor",
+  "donor_type",
+  "mobile",
+  "aadhaar_number",
+  "section_break_lmzq",
+  "organization_name",
+  "column_break_fwmr",
+  "gstin",
+  "section_break_yury",
+  "address_line_1",
+  "address_line_2",
+  "city",
+  "column_break_zlrx",
+  "state",
+  "pincode",
+  "country",
+  "section_break_scqx",
+  "kyc_status",
+  "preferred_communication",
+  "receive_email_updates",
+  "column_break_nwxf",
+  "consent_timestamp",
+  "last_login",
+  "receive_sms_updates",
+  "section_break_chmz",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "User",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "donor",
+   "fieldtype": "Link",
+   "label": "ERPNext Donor",
+   "options": "Donor",
+   "reqd": 1
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "donor_type",
+   "fieldtype": "Select",
+   "label": "Donor Type",
+   "options": "Individual\nCompany\nTrust\nFoundation\nCSR Entity\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "mobile",
+   "fieldtype": "Phone",
+   "label": "Mobile"
+  },
+  {
+   "fieldname": "pan_number",
+   "fieldtype": "Data",
+   "label": "PAN Number",
+   "placeholder": "Useful for tax-linked donor records"
+  },
+  {
+   "fieldname": "aadhaar_number",
+   "fieldtype": "Data",
+   "label": "Aadhaar Number"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "column_break_exlw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_lmzq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "organization_name",
+   "fieldtype": "Data",
+   "label": "Organization Name",
+   "placeholder": "For non-individual donors"
+  },
+  {
+   "fieldname": "column_break_fwmr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "gstin",
+   "fieldtype": "Data",
+   "label": "GSTIN",
+   "placeholder": "If company donor"
+  },
+  {
+   "fieldname": "section_break_yury",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "address_line_1",
+   "fieldtype": "Data",
+   "label": "Address Line 1"
+  },
+  {
+   "fieldname": "address_line_2",
+   "fieldtype": "Data",
+   "label": "Address Line 2"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State"
+  },
+  {
+   "fieldname": "pincode",
+   "fieldtype": "Data",
+   "label": "Pincode"
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "label": "Country",
+   "options": "Country"
+  },
+  {
+   "fieldname": "column_break_zlrx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_scqx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "preferred_communication",
+   "fieldtype": "Select",
+   "label": "Preferred Communication",
+   "options": "Email\nSMS\nWhatsApp\nPhone"
+  },
+  {
+   "default": "0",
+   "description": "Consent preference",
+   "fieldname": "receive_email_updates",
+   "fieldtype": "Check",
+   "label": "Receive Email Updates"
+  },
+  {
+   "default": "0",
+   "description": "Consent preference",
+   "fieldname": "receive_sms_updates",
+   "fieldtype": "Check",
+   "label": "Receive SMS Updates"
+  },
+  {
+   "fieldname": "consent_timestamp",
+   "fieldtype": "Datetime",
+   "label": "Consent Timestamp"
+  },
+  {
+   "description": "For internal checks",
+   "fieldname": "kyc_status",
+   "fieldtype": "Select",
+   "label": "KYC Status",
+   "options": "Pending\nVerified\nRejected"
+  },
+  {
+   "default": "1",
+   "fieldname": "portal_enabled",
+   "fieldtype": "Check",
+   "label": "Portal Enabled"
+  },
+  {
+   "fieldname": "last_login",
+   "fieldtype": "Datetime",
+   "label": "Last Login"
+  },
+  {
+   "fieldname": "section_break_chmz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes",
+   "placeholder": "Internal notes"
+  },
+  {
+   "fieldname": "column_break_nwxf",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-03-23 20:12:05.306511",
+ "modified_by": "Administrator",
+ "module": "Handle Me",
+ "name": "NGO Donor Profile",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

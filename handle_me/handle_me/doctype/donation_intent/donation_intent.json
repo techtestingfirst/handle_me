@@ -1,0 +1,285 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-03-23 18:40:22.552732",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "donor_profile",
+  "donor_name",
+  "program",
+  "column_break_ihpy",
+  "intent_date",
+  "erpnext_donor",
+  "email",
+  "mobile",
+  "section_break_bcjg",
+  "fund",
+  "amount",
+  "column_break_uiuv",
+  "donation_type",
+  "currency",
+  "section_break_ooug",
+  "allocations",
+  "section_break_aide",
+  "message",
+  "section_break_fccv",
+  "is_anonymous",
+  "status",
+  "gateway_order_id",
+  "payment_request",
+  "pan_number",
+  "column_break_jrpp",
+  "receipt_generated",
+  "payment_gateway",
+  "gateway_payment_id",
+  "erpnext_donation",
+  "source",
+  "section_break_vgdw",
+  "ip_address",
+  "remarks",
+  "column_break_wyiv",
+  "user_agent"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Naming Series",
+   "options": "DI-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "intent_date",
+   "fieldtype": "Date",
+   "label": "Intent Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "donor_profile",
+   "fieldtype": "Link",
+   "label": "Donor Profile",
+   "options": "NGO Donor Profile",
+   "reqd": 1
+  },
+  {
+   "fieldname": "erpnext_donor",
+   "fieldtype": "Link",
+   "label": "ERPNext Donor",
+   "options": "Donor",
+   "reqd": 1
+  },
+  {
+   "fieldname": "donor_name",
+   "fieldtype": "Data",
+   "label": "Donor Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "mobile",
+   "fieldtype": "Phone",
+   "label": "Mobile"
+  },
+  {
+   "fieldname": "program",
+   "fieldtype": "Link",
+   "label": "Program",
+   "options": "NGO Program"
+  },
+  {
+   "fieldname": "fund",
+   "fieldtype": "Link",
+   "label": "Fund",
+   "options": "NGO Fund"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Amount",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "default": "INR",
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "donation_type",
+   "fieldtype": "Select",
+   "label": "Donation Type",
+   "options": "One Time\nRecurring\nCorpus\nIn-Kind",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_ihpy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_bcjg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_uiuv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_aide",
+   "fieldtype": "Section Break"
+  },
+  {
+   "description": "Donor note",
+   "fieldname": "message",
+   "fieldtype": "Small Text",
+   "label": "Message"
+  },
+  {
+   "fieldname": "section_break_fccv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "description": "Public anonymity only",
+   "fieldname": "is_anonymous",
+   "fieldtype": "Check",
+   "label": "Is Anonymous"
+  },
+  {
+   "description": "Useful for tax-linked records",
+   "fieldname": "pan_number",
+   "fieldtype": "Data",
+   "label": "PAN Number"
+  },
+  {
+   "description": "Razorpay/PayU/etc.",
+   "fieldname": "payment_gateway",
+   "fieldtype": "Data",
+   "label": "Payment Gateway"
+  },
+  {
+   "description": "If Payments app is used",
+   "fieldname": "payment_request",
+   "fieldtype": "Link",
+   "label": "Payment Request",
+   "options": "Payment Request"
+  },
+  {
+   "fieldname": "gateway_order_id",
+   "fieldtype": "Data",
+   "label": "Gateway Order ID"
+  },
+  {
+   "description": "Final payment reference",
+   "fieldname": "gateway_payment_id",
+   "fieldtype": "Data",
+   "label": "Gateway Payment ID"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nPending Payment\nPayment Requested\nPaid\nFailed\nCancelled\nExpired",
+   "reqd": 1
+  },
+  {
+   "fieldname": "erpnext_donation",
+   "fieldtype": "Link",
+   "label": "ERPNext Donation",
+   "options": "Donation"
+  },
+  {
+   "default": "0",
+   "fieldname": "receipt_generated",
+   "fieldtype": "Check",
+   "label": "Receipt Generated"
+  },
+  {
+   "fieldname": "source",
+   "fieldtype": "Select",
+   "label": "Source",
+   "options": "Website\nDonor Portal\nAdmin Entry\nCampaign Link"
+  },
+  {
+   "fieldname": "section_break_vgdw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "description": "Optional website audit",
+   "fieldname": "ip_address",
+   "fieldtype": "Data",
+   "label": "IP Address"
+  },
+  {
+   "description": "Optional website audit",
+   "fieldname": "user_agent",
+   "fieldtype": "Small Text",
+   "label": "User Agent"
+  },
+  {
+   "description": "Internal notes",
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "column_break_wyiv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_jrpp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_ooug",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "allocations",
+   "fieldtype": "Table",
+   "label": "Allocations",
+   "options": "Donation Allocation"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-03-23 21:28:19.274206",
+ "modified_by": "Administrator",
+ "module": "Handle Me",
+ "name": "Donation Intent",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

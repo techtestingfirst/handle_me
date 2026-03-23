@@ -1,0 +1,207 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:registration_name",
+ "creation": "2026-03-23 20:41:06.768409",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "registration_name",
+  "registration_type",
+  "registration_date",
+  "pan",
+  "column_break_auvu",
+  "ngo_legal_name",
+  "fcra_registration_no",
+  "valid_upto",
+  "status",
+  "section_break_oirk",
+  "sbi_fcra_bank_name",
+  "sbi_fcra_account_no",
+  "column_break_obax",
+  "bank_branch",
+  "mha_login_id",
+  "section_break_jaia",
+  "last_annual_return_fy",
+  "last_annual_return_date",
+  "next_annual_return_due",
+  "column_break_wcaa",
+  "nil_return_required",
+  "renewal_reminder_days",
+  "responsible_user",
+  "registration_certificate",
+  "section_break_bvoq",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "registration_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Registration Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "registration_type",
+   "fieldtype": "Select",
+   "label": "Registration Type",
+   "options": "Registration\nPrior Permission",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fcra_registration_no",
+   "fieldtype": "Data",
+   "label": "FCRA Registration No",
+   "reqd": 1
+  },
+  {
+   "fieldname": "registration_date",
+   "fieldtype": "Date",
+   "label": "Registration Date"
+  },
+  {
+   "fieldname": "pan",
+   "fieldtype": "Data",
+   "label": "PAN",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_auvu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ngo_legal_name",
+   "fieldtype": "Data",
+   "label": "NGO Legal Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "valid_upto",
+   "fieldtype": "Date",
+   "label": "Valid Upto"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nActive\nExpired\nSuspended\nRenewal In Process",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_oirk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "sbi_fcra_bank_name",
+   "fieldtype": "Data",
+   "label": "SBI FCRA Bank Name"
+  },
+  {
+   "fieldname": "sbi_fcra_account_no",
+   "fieldtype": "Data",
+   "label": "SBI FCRA Account No"
+  },
+  {
+   "fieldname": "column_break_obax",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bank_branch",
+   "fieldtype": "Data",
+   "label": "Bank Branch"
+  },
+  {
+   "fieldname": "mha_login_id",
+   "fieldtype": "Data",
+   "label": "MHA Login ID"
+  },
+  {
+   "fieldname": "section_break_jaia",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "last_annual_return_fy",
+   "fieldtype": "Link",
+   "label": "Last Annual Return FY",
+   "options": "Fiscal Year"
+  },
+  {
+   "fieldname": "last_annual_return_date",
+   "fieldtype": "Date",
+   "label": "Last Annual Return Date"
+  },
+  {
+   "fieldname": "next_annual_return_due",
+   "fieldtype": "Date",
+   "label": "Next Annual Return Due"
+  },
+  {
+   "fieldname": "column_break_wcaa",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "nil_return_required",
+   "fieldtype": "Check",
+   "label": "Nil Return Required"
+  },
+  {
+   "fieldname": "renewal_reminder_days",
+   "fieldtype": "Int",
+   "label": "Renewal Reminder Days",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "responsible_user",
+   "fieldtype": "Link",
+   "label": "Responsible User",
+   "options": "User"
+  },
+  {
+   "description": "PDF copy",
+   "fieldname": "registration_certificate",
+   "fieldtype": "Attach",
+   "label": "Registration Certificate"
+  },
+  {
+   "fieldname": "section_break_bvoq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "description": "Internal notes",
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-03-23 20:50:26.676669",
+ "modified_by": "Administrator",
+ "module": "Handle Me",
+ "name": "FCRA Registration",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

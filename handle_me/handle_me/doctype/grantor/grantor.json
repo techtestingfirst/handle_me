@@ -1,0 +1,182 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:grantor_name",
+ "creation": "2026-03-23 22:18:35.737544",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "grantor_name",
+  "status",
+  "email",
+  "website",
+  "cin",
+  "csr_1_required",
+  "address_line_1",
+  "city",
+  "pincode",
+  "preferred_program_area",
+  "column_break_gkgy",
+  "grantor_type",
+  "contact_person",
+  "mobile",
+  "phone",
+  "pan",
+  "csr_1_available",
+  "address_line_2",
+  "state",
+  "country",
+  "section_break_adlw",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "grantor_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Grantor Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "grantor_type",
+   "fieldtype": "Select",
+   "label": "Grantor Type",
+   "options": "CSR Company\nFoundation\nGovernment\nTrust\nInternational Agency\nHigh Net Worth Individual\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Prospect\nActive\nInactive\nBlacklisted",
+   "reqd": 1
+  },
+  {
+   "fieldname": "contact_person",
+   "fieldtype": "Data",
+   "label": "Contact Person"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "mobile",
+   "fieldtype": "Phone",
+   "label": "Mobile"
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Phone",
+   "label": "Phone"
+  },
+  {
+   "fieldname": "website",
+   "fieldtype": "Data",
+   "label": "Website"
+  },
+  {
+   "fieldname": "pan",
+   "fieldtype": "Data",
+   "label": "PAN"
+  },
+  {
+   "fieldname": "cin",
+   "fieldtype": "Data",
+   "label": "CIN"
+  },
+  {
+   "default": "0",
+   "fieldname": "csr_1_required",
+   "fieldtype": "Check",
+   "label": "CSR 1 Required"
+  },
+  {
+   "default": "0",
+   "fieldname": "csr_1_available",
+   "fieldtype": "Check",
+   "label": "CSR 1 Available"
+  },
+  {
+   "fieldname": "address_line_1",
+   "fieldtype": "Data",
+   "label": "Address Line 1"
+  },
+  {
+   "fieldname": "address_line_2",
+   "fieldtype": "Data",
+   "label": "Address Line 2"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State"
+  },
+  {
+   "fieldname": "pincode",
+   "fieldtype": "Data",
+   "label": "Pincode"
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "label": "Country",
+   "options": "Country"
+  },
+  {
+   "fieldname": "preferred_program_area",
+   "fieldtype": "Data",
+   "label": "Preferred Program Area"
+  },
+  {
+   "fieldname": "section_break_adlw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "description": "Internal notes",
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "column_break_gkgy",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-03-23 22:30:23.889693",
+ "modified_by": "Administrator",
+ "module": "Handle Me",
+ "name": "Grantor",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

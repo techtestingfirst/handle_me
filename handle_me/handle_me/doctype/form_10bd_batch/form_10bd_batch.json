@@ -1,0 +1,197 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-03-23 20:02:48.016643",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "financial_year",
+  "ngo_pan",
+  "filing_date",
+  "acknowledgement_no",
+  "total_donations",
+  "column_break_hsfx",
+  "filing_status",
+  "ngo_name",
+  "80g_registration_no",
+  "due_date",
+  "total_donors",
+  "eligible_donations",
+  "section_break_xruz",
+  "preparation_notes",
+  "section_break_wbrh",
+  "filed_by",
+  "filing_attachment",
+  "column_break_jmim",
+  "10be_generation_status",
+  "10be_issued_count",
+  "section_break_reec",
+  "error_log"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Naming Series",
+   "options": "10BD-.FY.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "financial_year",
+   "fieldtype": "Link",
+   "label": "Financial Year",
+   "options": "Fiscal Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "ngo_name",
+   "fieldtype": "Data",
+   "label": "NGO Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "ngo_pan",
+   "fieldtype": "Data",
+   "label": "NGO PAN",
+   "reqd": 1
+  },
+  {
+   "fieldname": "80g_registration_no",
+   "fieldtype": "Data",
+   "label": "80G Registration No",
+   "reqd": 1
+  },
+  {
+   "fieldname": "filing_status",
+   "fieldtype": "Select",
+   "label": "Filing Status",
+   "options": "Draft\nPrepared\nUnder Review\nFiled\nRevised\nCancelled",
+   "reqd": 1
+  },
+  {
+   "fieldname": "filing_date",
+   "fieldtype": "Date",
+   "label": "Filing Date"
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "label": "Due Date"
+  },
+  {
+   "fieldname": "acknowledgement_no",
+   "fieldtype": "Data",
+   "label": "Acknowledgement No"
+  },
+  {
+   "description": "Count in batch",
+   "fieldname": "total_donors",
+   "fieldtype": "Int",
+   "label": "Total Donors",
+   "non_negative": 1
+  },
+  {
+   "description": "Total reported amount",
+   "fieldname": "total_donations",
+   "fieldtype": "Currency",
+   "label": "Total Donations",
+   "non_negative": 1
+  },
+  {
+   "description": "80G-eligible amount",
+   "fieldname": "eligible_donations",
+   "fieldtype": "Currency",
+   "label": "Eligible Donations",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "section_break_xruz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "description": "Internal notes",
+   "fieldname": "preparation_notes",
+   "fieldtype": "Small Text",
+   "label": "Preparation Notes"
+  },
+  {
+   "fieldname": "section_break_wbrh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "filed_by",
+   "fieldtype": "Link",
+   "label": "Filed By",
+   "options": "User"
+  },
+  {
+   "description": "Ack/file copy",
+   "fieldname": "filing_attachment",
+   "fieldtype": "Attach",
+   "label": "Filing Attachment"
+  },
+  {
+   "fieldname": "10be_generation_status",
+   "fieldtype": "Select",
+   "label": "10BE Generation Status",
+   "options": "Not Started\nIn Progress\nCompleted",
+   "reqd": 1
+  },
+  {
+   "fieldname": "10be_issued_count",
+   "fieldtype": "Int",
+   "label": "10BE Issued Count",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "section_break_reec",
+   "fieldtype": "Section Break"
+  },
+  {
+   "description": "Import/validation issues",
+   "fieldname": "error_log",
+   "fieldtype": "Small Text",
+   "label": "Error Log"
+  },
+  {
+   "fieldname": "column_break_hsfx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_jmim",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-03-23 20:39:43.062889",
+ "modified_by": "Administrator",
+ "module": "Handle Me",
+ "name": "Form 10BD Batch",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

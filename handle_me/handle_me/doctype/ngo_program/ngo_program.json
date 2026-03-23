@@ -1,0 +1,252 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:program_name",
+ "creation": "2026-03-22 23:04:51.168870",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "program_name",
+  "status",
+  "branch",
+  "start_date",
+  "end_date",
+  "column_break_lnzg",
+  "program_code",
+  "program_type",
+  "fund",
+  "program_manager",
+  "section_break_dnps",
+  "show_on_website",
+  "route",
+  "column_break_attu",
+  "public_title",
+  "section_break_tpmp",
+  "accept_donations",
+  "suggested_amount",
+  "goal_amount",
+  "amount_raised",
+  "column_break_sven",
+  "beneficiary_target",
+  "banner_image",
+  "is_restricted_program",
+  "requires_utilization_report",
+  "section_break_wjgy",
+  "short_description",
+  "notes",
+  "column_break_atoj",
+  "impact_summary",
+  "section_break_agsi",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "program_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Program Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "program_code",
+   "fieldtype": "Data",
+   "label": "Program Code"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nActive\nOn Hold\nCompleted\nClosed",
+   "reqd": 1
+  },
+  {
+   "fieldname": "program_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Program Type",
+   "options": "Education\nHealthcare\nLivelihood\nRelief\nEnvironment\nWomen Empowerment\nChild Welfare\nSkill Development\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "NGO Branch"
+  },
+  {
+   "fieldname": "fund",
+   "fieldtype": "Link",
+   "label": "Fund",
+   "options": "NGO Fund"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "program_manager",
+   "fieldtype": "Link",
+   "label": "Program Manager",
+   "options": "User"
+  },
+  {
+   "fieldname": "public_title",
+   "fieldtype": "Data",
+   "label": "Public Title",
+   "placeholder": "Website title"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route",
+   "placeholder": "Public page slug",
+   "unique": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "show_on_website",
+   "fieldtype": "Check",
+   "label": "Show on Website"
+  },
+  {
+   "fieldname": "column_break_lnzg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_dnps",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_attu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_tpmp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "accept_donations",
+   "fieldtype": "Check",
+   "label": "Accept Donations"
+  },
+  {
+   "fieldname": "suggested_amount",
+   "fieldtype": "Currency",
+   "label": "Suggested Amount",
+   "placeholder": "Default amount on donate page"
+  },
+  {
+   "fieldname": "goal_amount",
+   "fieldtype": "Currency",
+   "label": "Goal Amount",
+   "placeholder": "Campaign target"
+  },
+  {
+   "fieldname": "amount_raised",
+   "fieldtype": "Currency",
+   "label": "Amount Raised"
+  },
+  {
+   "fieldname": "column_break_sven",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "beneficiary_target",
+   "fieldtype": "Int",
+   "label": "Beneficiary Target"
+  },
+  {
+   "fieldname": "section_break_agsi",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  },
+  {
+   "fieldname": "section_break_wjgy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "short_description",
+   "fieldtype": "Small Text",
+   "label": "Short Description",
+   "placeholder": "Card Text"
+  },
+  {
+   "description": "Website hero image",
+   "fieldname": "banner_image",
+   "fieldtype": "Attach Image",
+   "label": "Banner Image"
+  },
+  {
+   "fieldname": "impact_summary",
+   "fieldtype": "Small Text",
+   "label": "Impact Summary",
+   "placeholder": "Public Summary"
+  },
+  {
+   "fieldname": "column_break_atoj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "description": "For restricted donations",
+   "fieldname": "is_restricted_program",
+   "fieldtype": "Check",
+   "label": "Is Restricted Program"
+  },
+  {
+   "default": "0",
+   "description": "Grant/CSR usage",
+   "fieldname": "requires_utilization_report",
+   "fieldtype": "Check",
+   "label": "Requires Utilization Report"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes",
+   "placeholder": "Internal notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-03-23 22:08:30.745810",
+ "modified_by": "Administrator",
+ "module": "Handle Me",
+ "name": "NGO Program",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

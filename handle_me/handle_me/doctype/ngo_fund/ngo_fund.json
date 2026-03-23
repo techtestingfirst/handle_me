@@ -1,0 +1,176 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:fund_name",
+ "creation": "2026-03-22 23:40:50.952240",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "fund_name",
+  "fund_code",
+  "start_date",
+  "column_break_ibng",
+  "fund_type",
+  "status",
+  "end_date",
+  "section_break_arde",
+  "company",
+  "default_account",
+  "cost_center",
+  "column_break_ljhy",
+  "allow_public_donations",
+  "is_foreign_fund",
+  "is_corpus_fund",
+  "requires_donor_restriction",
+  "section_break_ppem",
+  "usage_notes",
+  "section_break_rjta",
+  "fund_description"
+ ],
+ "fields": [
+  {
+   "fieldname": "fund_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Fund Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "fund_code",
+   "fieldtype": "Data",
+   "label": "Fund Code"
+  },
+  {
+   "fieldname": "fund_type",
+   "fieldtype": "Select",
+   "label": "Fund Type",
+   "options": "General\nRestricted\nCorpus\nCSR\nGrant\nFCRA",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nInactive\nClosed",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_ibng",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_arde",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Fiscal Year Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "default_account",
+   "fieldtype": "Link",
+   "label": "Default Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "cost_center",
+   "fieldtype": "Link",
+   "label": "Cost Center",
+   "options": "Cost Center"
+  },
+  {
+   "default": "0",
+   "description": "For website donation use",
+   "fieldname": "allow_public_donations",
+   "fieldtype": "Check",
+   "label": "Allow Public Donations"
+  },
+  {
+   "fieldname": "column_break_ljhy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "description": "Separate FCRA-style control",
+   "fieldname": "is_foreign_fund",
+   "fieldtype": "Check",
+   "label": "Is Foreign Fund"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_corpus_fund",
+   "fieldtype": "Check",
+   "label": "Is Corpus Fund"
+  },
+  {
+   "default": "0",
+   "description": "Restriction enforcement",
+   "fieldname": "requires_donor_restriction",
+   "fieldtype": "Check",
+   "label": "Requires Donor Restriction"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "section_break_rjta",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "fund_description",
+   "fieldtype": "Text Editor",
+   "label": "Fund Description",
+   "placeholder": "Purpose and rules"
+  },
+  {
+   "fieldname": "section_break_ppem",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "usage_notes",
+   "fieldtype": "Small Text",
+   "label": "Usage Notes",
+   "placeholder": "Internal finance guidance"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-03-23 20:12:17.447324",
+ "modified_by": "Administrator",
+ "module": "Handle Me",
+ "name": "NGO Fund",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

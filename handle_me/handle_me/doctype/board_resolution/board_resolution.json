@@ -1,0 +1,218 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-03-23 22:31:39.043808",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "resolution_title",
+  "resolution_category",
+  "effective_date",
+  "column_break_ngpj",
+  "meeting_type",
+  "resolution_date",
+  "resolution_number",
+  "responsible_user",
+  "section_break_niiq",
+  "summary",
+  "section_break_kfhx",
+  "full_text",
+  "section_break_aeol",
+  "passed_by",
+  "minutes_attachment",
+  "status",
+  "requires_roc_filing",
+  "column_break_zhaf",
+  "chairperson",
+  "resolution_attachment",
+  "roc_form_reference",
+  "roc_filing_due_date",
+  "section_break_fvnr",
+  "notes",
+  "section_break_jd4m",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_jd4m",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Board Resolution",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Naming Series",
+   "options": "BR-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "resolution_date",
+   "fieldtype": "Data",
+   "label": "Resolution Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "meeting_type",
+   "fieldtype": "Select",
+   "label": "Meeting Type",
+   "options": "Board Meeting\nGeneral Meeting\nExecutive Committee Meeting\nTrustee Meeting",
+   "reqd": 1
+  },
+  {
+   "fieldname": "resolution_title",
+   "fieldtype": "Data",
+   "label": "Resolution Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "resolution_category",
+   "fieldtype": "Select",
+   "label": "Resolution Category",
+   "options": "Bank Signatory\nGrant Approval\nAnnual Accounts Approval\nStatutory Filing Approval\nAppointment\nProperty/Asset\nPolicy Approval\nBorrowing\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "resolution_number",
+   "fieldtype": "Data",
+   "label": "Resolution Number"
+  },
+  {
+   "fieldname": "effective_date",
+   "fieldtype": "Date",
+   "label": "Effective Date"
+  },
+  {
+   "fieldname": "section_break_niiq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "summary",
+   "fieldtype": "Small Text",
+   "label": "Summary"
+  },
+  {
+   "fieldname": "section_break_kfhx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "full_text",
+   "fieldtype": "Text Editor",
+   "label": "Full Text",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_aeol",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "passed_by",
+   "fieldtype": "Data",
+   "label": "Passed By"
+  },
+  {
+   "fieldname": "chairperson",
+   "fieldtype": "Data",
+   "label": "Chairperson"
+  },
+  {
+   "fieldname": "minutes_attachment",
+   "fieldtype": "Attach",
+   "label": "Minutes Attachment"
+  },
+  {
+   "fieldname": "resolution_attachment",
+   "fieldtype": "Attach",
+   "label": "Resolution Attachment"
+  },
+  {
+   "default": "0",
+   "fieldname": "requires_roc_filing",
+   "fieldtype": "Check",
+   "label": "Requires ROC Filing"
+  },
+  {
+   "fieldname": "roc_form_reference",
+   "fieldtype": "Data",
+   "label": "ROC Form Reference"
+  },
+  {
+   "fieldname": "roc_filing_due_date",
+   "fieldtype": "Date",
+   "label": "ROC Filing Due Date"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nApproved\nFiled\nClosed\nCancelled",
+   "reqd": 1
+  },
+  {
+   "fieldname": "responsible_user",
+   "fieldtype": "Link",
+   "label": "Responsible User",
+   "options": "User"
+  },
+  {
+   "fieldname": "section_break_fvnr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "description": "Internal notes",
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "column_break_ngpj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_zhaf",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-03-23 22:43:37.967889",
+ "modified_by": "Administrator",
+ "module": "Handle Me",
+ "name": "Board Resolution",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

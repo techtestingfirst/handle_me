@@ -1,0 +1,374 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-03-22 22:20:41.612265",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "ngo_name",
+  "short_name",
+  "logo",
+  "website",
+  "email",
+  "column_break_uijo",
+  "ngo_pan",
+  "organization_type",
+  "registration_number",
+  "registration_date",
+  "phone",
+  "section_break_zdml",
+  "address_line_1",
+  "address_line_2",
+  "city",
+  "column_break_wygb",
+  "state",
+  "pincode",
+  "country",
+  "section_break_jqpc",
+  "registration_12ab",
+  "registration_12ab_from",
+  "registration_12ab_upto",
+  "column_break_xrrk",
+  "registration_80g",
+  "registration_80g_from",
+  "registration_80g_upto",
+  "section_break_fhnz",
+  "fcra_enabled",
+  "fcra_registration_no",
+  "fcra_valid_upto",
+  "column_break_vsps",
+  "fcra_bank_name",
+  "fcra_bank_account_no",
+  "section_break_hjhu",
+  "company",
+  "donation_cost_center",
+  "column_break_mmyi",
+  "default_currency",
+  "section_break_mmnt",
+  "domestic_donation_account",
+  "corpus_fund_account",
+  "column_break_trco",
+  "foreign_donation_account",
+  "section_break_mpyt",
+  "payment_gateway_enabled",
+  "receipt_prefix",
+  "privacy_policy_url",
+  "receipt_footer",
+  "column_break_ptku",
+  "authorized_signatory_name",
+  "authorized_signatory_designation",
+  "terms_url"
+ ],
+ "fields": [
+  {
+   "fieldname": "ngo_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "NGO Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "short_name",
+   "fieldtype": "Data",
+   "label": "Short Name"
+  },
+  {
+   "fieldname": "logo",
+   "fieldtype": "Attach Image",
+   "label": "Logo"
+  },
+  {
+   "fieldname": "website",
+   "fieldtype": "Data",
+   "label": "Website"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Phone",
+   "label": "Phone"
+  },
+  {
+   "fieldname": "ngo_pan",
+   "fieldtype": "Data",
+   "label": "NGO PAN",
+   "reqd": 1
+  },
+  {
+   "fieldname": "organization_type",
+   "fieldtype": "Select",
+   "label": "Organization Type",
+   "options": "Trust\nSociety\nSection 8 Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "registration_number",
+   "fieldtype": "Data",
+   "label": "Registration Number"
+  },
+  {
+   "fieldname": "column_break_uijo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "registration_date",
+   "fieldtype": "Date",
+   "label": "Registration Date"
+  },
+  {
+   "fieldname": "section_break_zdml",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "address_line_1",
+   "fieldtype": "Data",
+   "label": "Address Line 1",
+   "reqd": 1
+  },
+  {
+   "fieldname": "address_line_2",
+   "fieldtype": "Data",
+   "label": "Address Line 2"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City",
+   "reqd": 1
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_wygb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pincode",
+   "fieldtype": "Data",
+   "label": "Pincode",
+   "reqd": 1
+  },
+  {
+   "default": "India",
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "label": "Country",
+   "options": "Country",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_jqpc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "registration_12ab",
+   "fieldtype": "Data",
+   "label": "12AB Registration No"
+  },
+  {
+   "fieldname": "registration_12ab_from",
+   "fieldtype": "Date",
+   "label": "12AB Valid From"
+  },
+  {
+   "fieldname": "registration_12ab_upto",
+   "fieldtype": "Date",
+   "label": "12AB Valid Upto"
+  },
+  {
+   "fieldname": "registration_80g",
+   "fieldtype": "Data",
+   "label": "80G Registration No"
+  },
+  {
+   "fieldname": "column_break_xrrk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "registration_80g_from",
+   "fieldtype": "Date",
+   "label": "80G Valid From"
+  },
+  {
+   "fieldname": "registration_80g_upto",
+   "fieldtype": "Date",
+   "label": "80G Valid Upto"
+  },
+  {
+   "fieldname": "section_break_fhnz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "fcra_enabled",
+   "fieldtype": "Check",
+   "label": "FCRA Enabled"
+  },
+  {
+   "fieldname": "fcra_registration_no",
+   "fieldtype": "Data",
+   "label": "FCRA Registration No"
+  },
+  {
+   "fieldname": "fcra_valid_upto",
+   "fieldtype": "Date",
+   "label": "FCRA Valid Upto"
+  },
+  {
+   "fieldname": "fcra_bank_name",
+   "fieldtype": "Data",
+   "label": "FCRA Bank Name"
+  },
+  {
+   "fieldname": "fcra_bank_account_no",
+   "fieldtype": "Data",
+   "label": "FCRA Bank Account No"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Fiscal Year Company",
+   "reqd": 1
+  },
+  {
+   "default": "INR",
+   "fieldname": "default_currency",
+   "fieldtype": "Link",
+   "label": "Default Currency",
+   "options": "Currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "donation_cost_center",
+   "fieldtype": "Link",
+   "label": "Donation Cost Center",
+   "options": "Cost Center"
+  },
+  {
+   "fieldname": "column_break_vsps",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_hjhu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_mmyi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_mmnt",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "domestic_donation_account",
+   "fieldtype": "Link",
+   "label": "Domestic Donation Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "foreign_donation_account",
+   "fieldtype": "Link",
+   "label": "Foreign Donation Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "corpus_fund_account",
+   "fieldtype": "Link",
+   "label": "Corpus Fund Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "column_break_trco",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_mpyt",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "payment_gateway_enabled",
+   "fieldtype": "Check",
+   "label": "Payment Gateway Enabled"
+  },
+  {
+   "description": "Example: CLF-REC-",
+   "fieldname": "receipt_prefix",
+   "fieldtype": "Data",
+   "label": "Receipt Prefix",
+   "reqd": 1
+  },
+  {
+   "description": "Printed on receipt/certificate",
+   "fieldname": "authorized_signatory_name",
+   "fieldtype": "Data",
+   "label": "Authorized Signatory Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "authorized_signatory_designation",
+   "fieldtype": "Data",
+   "label": "Authorized Signatory Designation"
+  },
+  {
+   "description": "Acknowledgement footer",
+   "fieldname": "receipt_footer",
+   "fieldtype": "Small Text",
+   "label": "Receipt Footer"
+  },
+  {
+   "description": "Donor privacy reference",
+   "fieldname": "privacy_policy_url",
+   "fieldtype": "Data",
+   "label": "Privacy Policy URL"
+  },
+  {
+   "description": "Portal/website terms",
+   "fieldname": "terms_url",
+   "fieldtype": "Data",
+   "label": "Terms URL"
+  },
+  {
+   "fieldname": "column_break_ptku",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-03-23 20:12:46.307089",
+ "modified_by": "Administrator",
+ "module": "Handle Me",
+ "name": "NGO Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
