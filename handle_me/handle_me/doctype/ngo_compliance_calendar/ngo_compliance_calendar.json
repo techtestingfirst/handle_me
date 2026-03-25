@@ -1,0 +1,190 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-03-24 22:58:25.261029",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "compliance_type",
+  "due_date",
+  "priority",
+  "related_doctype",
+  "completion_date",
+  "branch",
+  "description",
+  "column_break_rbio",
+  "compliance_title",
+  "related_financial_year",
+  "reminder_date",
+  "status",
+  "related_document",
+  "responsible_user",
+  "completion_attachment",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Naming Series",
+   "options": "CC-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "compliance_title",
+   "fieldtype": "Data",
+   "label": "Compliance Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "compliance_type",
+   "fieldtype": "Select",
+   "label": "Compliance Type",
+   "options": "Form 10BD\nForm 10BE\n12AB Renewal\n80G Renewal\nFCRA Return\nAudit Filing\nITR-7 Filing\nBoard Meeting\nCSR Reporting\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "related_financial_year",
+   "fieldtype": "Link",
+   "label": "Related Financial Year",
+   "options": "Fiscal Year"
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "label": "Due Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "reminder_date",
+   "fieldtype": "Date",
+   "label": "Reminder Date"
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "Low\nMedium\nHigh\nCritical",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Upcoming\nIn Progress\nCompleted\nOverdue\nCancelled",
+   "reqd": 1
+  },
+  {
+   "fieldname": "responsible_user",
+   "fieldtype": "Link",
+   "label": "Responsible User",
+   "options": "User"
+  },
+  {
+   "fieldname": "related_doctype",
+   "fieldtype": "Link",
+   "label": "Related DocType",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "related_document",
+   "fieldtype": "Dynamic Link",
+   "label": "Related Document",
+   "options": "related_doctype"
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "NGO Branch"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "completion_date",
+   "fieldtype": "Date",
+   "label": "Completion Date"
+  },
+  {
+   "fieldname": "completion_attachment",
+   "fieldtype": "Attach",
+   "label": "Completion Attachment"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "column_break_rbio",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-03-25 22:37:49.473849",
+ "modified_by": "Administrator",
+ "module": "Handle Me",
+ "name": "NGO Compliance Calendar",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NGO Admin",
+   "select": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "report": 1,
+   "role": "Accounts User",
+   "select": 1
+  },
+  {
+   "create": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Compliance Officer",
+   "select": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "report": 1,
+   "role": "Program Manager",
+   "select": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

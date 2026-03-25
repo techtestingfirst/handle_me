@@ -1,0 +1,206 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-03-24 21:06:34.345987",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "enrollment_date",
+  "beneficiary",
+  "start_date",
+  "program",
+  "priority_level",
+  "approved_budget",
+  "column_break_xekt",
+  "enrollment_status",
+  "service_type",
+  "branch",
+  "end_date",
+  "case_worker",
+  "referral_source",
+  "section_break_yhqh",
+  "outcome_target",
+  "column_break_vnic",
+  "exit_reason",
+  "section_break_rjwo",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Naming Series",
+   "options": "PBE-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "enrollment_date",
+   "fieldtype": "Date",
+   "label": "Enrollment Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "beneficiary",
+   "fieldtype": "Link",
+   "label": "Beneficiary",
+   "options": "NGO Beneficiary",
+   "reqd": 1
+  },
+  {
+   "fieldname": "program",
+   "fieldtype": "Link",
+   "label": "Program",
+   "options": "NGO Program",
+   "reqd": 1
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "NGO Branch",
+   "reqd": 1
+  },
+  {
+   "fieldname": "enrollment_status",
+   "fieldtype": "Select",
+   "label": "Enrollment Status",
+   "options": "Applied\nActive\nCompleted\nDropped\nTransferred\nOn Hold",
+   "reqd": 1
+  },
+  {
+   "fieldname": "service_type",
+   "fieldtype": "Select",
+   "label": "Service Type",
+   "options": "Education Support\nMedical Support\nFood Aid\nLivelihood Support\nCounselling\nTraining\nScholarship\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "case_worker",
+   "fieldtype": "Link",
+   "label": "Case Worker",
+   "options": "User"
+  },
+  {
+   "fieldname": "priority_level",
+   "fieldtype": "Select",
+   "label": "Priority Level",
+   "options": "Low\nMedium\nHigh\nCritical"
+  },
+  {
+   "description": "School, hospital, self, field worker, etc.",
+   "fieldname": "referral_source",
+   "fieldtype": "Data",
+   "label": "Referral Source"
+  },
+  {
+   "fieldname": "approved_budget",
+   "fieldtype": "Currency",
+   "label": "Approved Budget",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "section_break_yhqh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "outcome_target",
+   "fieldtype": "Small Text",
+   "label": "Outcome Target"
+  },
+  {
+   "fieldname": "exit_reason",
+   "fieldtype": "Small Text",
+   "label": "Exit Reason"
+  },
+  {
+   "fieldname": "column_break_vnic",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_rjwo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "description": "Internal notes",
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "column_break_xekt",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-03-25 22:15:26.250130",
+ "modified_by": "Administrator",
+ "module": "Handle Me",
+ "name": "Program Beneficiary Enrollment",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NGO Admin",
+   "select": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Accounts User",
+   "select": 1
+  },
+  {
+   "create": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Program Manager",
+   "select": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Compliance Officer",
+   "select": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

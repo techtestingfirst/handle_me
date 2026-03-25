@@ -13,9 +13,11 @@ class FCRAReturnBatch(Document):
 
 	if TYPE_CHECKING:
 		from frappe.types import DF
+		from handle_me.handle_me.doctype.fcra_annual_return_row.fcra_annual_return_row import FCRAAnnualReturnRow
 
 		acknowledgement_no: DF.Data | None
 		administrative_expenses: DF.Currency
+		annual_return_rows: DF.Table[FCRAAnnualReturnRow]
 		audit_attachment: DF.Attach | None
 		bank_statement_attachment: DF.Attach | None
 		due_date: DF.Date | None

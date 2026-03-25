@@ -135,7 +135,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-03-23 21:06:43.674291",
+ "modified": "2026-03-25 22:33:37.007618",
  "modified_by": "Administrator",
  "module": "Handle Me",
  "name": "Statutory Document",
@@ -153,6 +153,37 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "create": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NGO Admin",
+   "select": 1,
+   "write": 1
+  },
+  {
+   "print": 1,
+   "read": 1,
+   "role": "Accounts User",
+   "select": 1
+  },
+  {
+   "create": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Compliance Officer",
+   "select": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Program Manager",
+   "select": 1
   }
  ],
  "row_format": "Dynamic",

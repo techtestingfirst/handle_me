@@ -1,0 +1,210 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-03-24 21:20:16.814773",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "assignment_type",
+  "program",
+  "branch",
+  "start_date",
+  "actual_hours",
+  "status",
+  "column_break_vosm",
+  "volunteer",
+  "assignment_date",
+  "role_title",
+  "supervisor",
+  "end_date",
+  "estimated_hours",
+  "orientation_completed",
+  "feedback_received",
+  "section_break_ubeh",
+  "performance_notes",
+  "column_break_whgk",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Naming Series",
+   "options": "VA-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "assignment_date",
+   "fieldtype": "Date",
+   "label": "Assignment Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "volunteer",
+   "fieldtype": "Link",
+   "label": "Volunteer",
+   "options": "HM Volunteer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "program",
+   "fieldtype": "Link",
+   "label": "Program",
+   "options": "Program Beneficiary Enrollment"
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "NGO Branch"
+  },
+  {
+   "fieldname": "assignment_type",
+   "fieldtype": "Select",
+   "label": "Assignment Type",
+   "options": "Event\nField Work\nTeaching\nFundraising\nCounselling\nAdministration\nAwareness Campaign\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "role_title",
+   "fieldtype": "Data",
+   "label": "Role Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "supervisor",
+   "fieldtype": "Link",
+   "label": "Supervisor",
+   "options": "User"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Planned\nActive\nCompleted\nCancelled\nNo Show",
+   "reqd": 1
+  },
+  {
+   "description": "Planned volunteer time",
+   "fieldname": "estimated_hours",
+   "fieldtype": "Float",
+   "label": "Estimated Hours",
+   "non_negative": 1
+  },
+  {
+   "description": "Used for engagement analysis",
+   "fieldname": "actual_hours",
+   "fieldtype": "Float",
+   "label": "Actual Hours",
+   "non_negative": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "orientation_completed",
+   "fieldtype": "Check",
+   "label": "Orientation Completed"
+  },
+  {
+   "default": "0",
+   "fieldname": "feedback_received",
+   "fieldtype": "Check",
+   "label": "Feedback Received"
+  },
+  {
+   "fieldname": "section_break_ubeh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "performance_notes",
+   "fieldtype": "Small Text",
+   "label": "Performance Notes"
+  },
+  {
+   "description": "Internal notes",
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "column_break_whgk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_vosm",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-03-25 22:17:14.211367",
+ "modified_by": "Administrator",
+ "module": "Handle Me",
+ "name": "Volunteer Assignment",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NGO Admin",
+   "select": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Accounts User",
+   "select": 1
+  },
+  {
+   "create": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Program Manager",
+   "select": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Compliance Officer",
+   "select": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

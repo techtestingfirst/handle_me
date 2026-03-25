@@ -128,6 +128,25 @@ app_license = "mit"
 # 	"Event": "frappe.desk.doctype.event.event.has_permission",
 # }
 
+permission_query_conditions = {
+    "NGO Donor Profile": "handle_me.permissions.donor_permissions.ngo_donor_profile_query",
+    "Donation Intent": "handle_me.permissions.donor_permissions.donation_intent_query",
+    "Donation Receipt": "handle_me.permissions.donor_permissions.donation_receipt_query",
+    "Donation Certificate": "handle_me.permissions.donor_permissions.donation_certificate_query",
+    "Donor Consent Log": "handle_me.permissions.donor_permissions.donor_consent_log_query",
+    "Portal Access Log": "handle_me.permissions.donor_permissions.portal_access_log_query",
+    "Donor Communication Log": "handle_me.permissions.donor_permissions.donor_communication_log_query",
+}
+
+has_permission = {
+    "NGO Donor Profile": "handle_me.permissions.donor_permissions.ngo_donor_profile_has_permission",
+    "Donation Intent": "handle_me.permissions.donor_permissions.donation_intent_has_permission",
+    "Donation Receipt": "handle_me.permissions.donor_permissions.donation_receipt_has_permission",
+    "Donation Certificate": "handle_me.permissions.donor_permissions.donation_certificate_has_permission",
+    "Donor Consent Log": "handle_me.permissions.donor_permissions.donor_consent_log_has_permission",
+    "Portal Access Log": "handle_me.permissions.donor_permissions.portal_access_log_has_permission",
+    "Donor Communication Log": "handle_me.permissions.donor_permissions.donor_communication_log_has_permission",
+}
 # Document Events
 # ---------------
 # Hook on document methods and events

@@ -1,0 +1,257 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-03-24 20:10:21.187340",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "award_date",
+  "grant_application",
+  "sanctioned_amount",
+  "fund",
+  "program",
+  "start_date",
+  "first_disbursement_date",
+  "status",
+  "utilization_report_required",
+  "column_break_dwav",
+  "award_title",
+  "branch",
+  "grantor",
+  "currency",
+  "disbursement_type",
+  "restriction_type",
+  "end_date",
+  "utilization_frequency",
+  "project_owner",
+  "agreement_file",
+  "section_break_okre",
+  "remarks",
+  "section_break_arz5",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_arz5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Grant Award",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Naming Series",
+   "options": "GW-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "description": "Sanction date",
+   "fieldname": "award_date",
+   "fieldtype": "Date",
+   "label": "Award Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "grant_application",
+   "fieldtype": "Link",
+   "label": "Grant Application",
+   "options": "HM Grant Application"
+  },
+  {
+   "fieldname": "grantor",
+   "fieldtype": "Link",
+   "label": "Grantor",
+   "options": "Grantor",
+   "reqd": 1
+  },
+  {
+   "fieldname": "program",
+   "fieldtype": "Link",
+   "label": "Program",
+   "options": "NGO Program"
+  },
+  {
+   "fieldname": "fund",
+   "fieldtype": "Link",
+   "label": "Fund",
+   "options": "NGO Fund"
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "NGO Branch"
+  },
+  {
+   "description": "Title of sanctioned grant",
+   "fieldname": "award_title",
+   "fieldtype": "Data",
+   "label": "Award Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sanctioned_amount",
+   "fieldtype": "Currency",
+   "label": "Sanctioned Amount",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "disbursement_type",
+   "fieldtype": "Select",
+   "label": "Disbursement Type",
+   "options": "One Time\nMilestone Based\nQuarterly\nMonthly\nReimbursement",
+   "reqd": 1
+  },
+  {
+   "fieldname": "restriction_type",
+   "fieldtype": "Select",
+   "label": "Restriction Type",
+   "options": "Unrestricted\nProgram Restricted\nTime Restricted\nCorpus\nCSR Restricted",
+   "reqd": 1
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "default": "0",
+   "fieldname": "utilization_report_required",
+   "fieldtype": "Check",
+   "label": "Utilization Report Required"
+  },
+  {
+   "fieldname": "utilization_frequency",
+   "fieldtype": "Select",
+   "label": "Utilization Frequency",
+   "options": "Monthly\nQuarterly\nHalf Yearly\nYearly\nOn Demand"
+  },
+  {
+   "fieldname": "agreement_file",
+   "fieldtype": "Attach",
+   "label": "Agreement File"
+  },
+  {
+   "fieldname": "first_disbursement_date",
+   "fieldtype": "Date",
+   "label": "First Disbursement Date"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nActive\nCompleted\nClosed\nCancelled",
+   "reqd": 1
+  },
+  {
+   "fieldname": "project_owner",
+   "fieldtype": "Link",
+   "label": "Project Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "section_break_okre",
+   "fieldtype": "Section Break"
+  },
+  {
+   "description": "Internal notes",
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "column_break_dwav",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-03-25 22:13:15.242476",
+ "modified_by": "Administrator",
+ "module": "Handle Me",
+ "name": "Grant Award",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NGO Admin",
+   "select": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts User",
+   "select": 1
+  },
+  {
+   "create": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Program Manager",
+   "select": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Compliance Officer",
+   "select": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

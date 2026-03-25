@@ -1,0 +1,278 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:full_name",
+ "creation": "2026-03-24 20:25:14.972508",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "full_name",
+  "beneficiary_type",
+  "gender",
+  "mobile",
+  "aadhaar_number",
+  "category",
+  "column_break_vofp",
+  "beneficiary_id",
+  "status",
+  "date_of_birth",
+  "email",
+  "guardian_name",
+  "section_break_kaxb",
+  "address_line_1",
+  "city",
+  "state",
+  "column_break_mmok",
+  "address_line_2",
+  "district",
+  "pincode",
+  "country",
+  "section_break_gtqi",
+  "branch",
+  "program",
+  "photo",
+  "column_break_nhgv",
+  "verification_status",
+  "registration_date",
+  "id_proof",
+  "section_break_gniw",
+  "needs_assessment",
+  "section_break_briv",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Full Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "beneficiary_id",
+   "fieldtype": "Data",
+   "label": "Beneficiary ID"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nInactive\nExited\nOn Hold",
+   "reqd": 1
+  },
+  {
+   "fieldname": "beneficiary_type",
+   "fieldtype": "Select",
+   "label": "Beneficiary Type",
+   "options": "Individual\nFamily\nGroup\nInstitution",
+   "reqd": 1
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "Male\nFemale\nOther\nPrefer Not to Say"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "mobile",
+   "fieldtype": "Phone",
+   "label": "Mobile"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "aadhaar_number",
+   "fieldtype": "Data",
+   "label": "Aadhaar Number"
+  },
+  {
+   "fieldname": "guardian_name",
+   "fieldtype": "Data",
+   "label": "Guardian Name"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "label": "Category",
+   "options": "Child\nWoman\nSenior Citizen\nFarmer\nStudent\nPatient\nFamily\nDifferently Abled\nOther"
+  },
+  {
+   "fieldname": "section_break_kaxb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "address_line_1",
+   "fieldtype": "Data",
+   "label": "Address Line 1"
+  },
+  {
+   "fieldname": "address_line_2",
+   "fieldtype": "Data",
+   "label": "Address Line 2"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fieldname": "district",
+   "fieldtype": "Data",
+   "label": "District"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State"
+  },
+  {
+   "fieldname": "pincode",
+   "fieldtype": "Data",
+   "label": "Pincode"
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "label": "Country",
+   "options": "Country"
+  },
+  {
+   "fieldname": "section_break_gtqi",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "NGO Branch"
+  },
+  {
+   "fieldname": "program",
+   "fieldtype": "Link",
+   "label": "Program",
+   "options": "NGO Program"
+  },
+  {
+   "fieldname": "registration_date",
+   "fieldtype": "Date",
+   "label": "Registration Date"
+  },
+  {
+   "fieldname": "verification_status",
+   "fieldtype": "Select",
+   "label": "Verification Status",
+   "options": "Pending\nVerified\nRejected",
+   "reqd": 1
+  },
+  {
+   "fieldname": "photo",
+   "fieldtype": "Attach Image",
+   "label": "Photo"
+  },
+  {
+   "fieldname": "id_proof",
+   "fieldtype": "Attach",
+   "label": "ID Proof"
+  },
+  {
+   "fieldname": "section_break_gniw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "description": "Background/need summary",
+   "fieldname": "needs_assessment",
+   "fieldtype": "Text Editor",
+   "label": "Needs Assessment"
+  },
+  {
+   "fieldname": "section_break_briv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "description": "Internal notes",
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "column_break_nhgv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_mmok",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_vofp",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-03-25 21:40:50.091576",
+ "modified_by": "Administrator",
+ "module": "Handle Me",
+ "name": "NGO Beneficiary",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NGO Admin",
+   "select": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Accounts User",
+   "select": 1
+  },
+  {
+   "create": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Program Manager",
+   "select": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Compliance Officer",
+   "select": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

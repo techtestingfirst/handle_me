@@ -19,6 +19,8 @@
   "due_date",
   "total_donors",
   "eligible_donations",
+  "section_break_jnnj",
+  "donor_rows",
   "section_break_xruz",
   "preparation_notes",
   "section_break_wbrh",
@@ -163,12 +165,22 @@
   {
    "fieldname": "column_break_jmim",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_jnnj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "donor_rows",
+   "fieldtype": "Table",
+   "label": "Donor Rows",
+   "options": "Form 10BD Donor Row"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-03-23 20:39:43.062889",
+ "modified": "2026-03-25 22:28:14.459811",
  "modified_by": "Administrator",
  "module": "Handle Me",
  "name": "Form 10BD Batch",
@@ -185,6 +197,32 @@
    "report": 1,
    "role": "System Manager",
    "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NGO Admin",
+   "select": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "report": 1,
+   "role": "Accounts User",
+   "select": 1
+  },
+  {
+   "create": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Compliance Officer",
+   "select": 1,
    "write": 1
   }
  ],

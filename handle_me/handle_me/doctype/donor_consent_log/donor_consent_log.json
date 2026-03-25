@@ -1,0 +1,181 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-03-24 22:48:44.281856",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "consent_status",
+  "donor",
+  "source",
+  "consent_text_version",
+  "related_doctype",
+  "related_document",
+  "recorded_by",
+  "column_break_hsfs",
+  "consent_time",
+  "consent_type",
+  "donor_profile",
+  "source_url",
+  "ip_address",
+  "user_agent",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Naming Series",
+   "options": "CONS-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "consent_time",
+   "fieldtype": "Datetime",
+   "label": "Consent Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "donor_profile",
+   "fieldtype": "Link",
+   "label": "Donor Profile",
+   "options": "NGO Donor Profile",
+   "reqd": 1
+  },
+  {
+   "fieldname": "donor",
+   "fieldtype": "Link",
+   "label": "Donor",
+   "options": "Donor",
+   "reqd": 1
+  },
+  {
+   "fieldname": "consent_type",
+   "fieldtype": "Select",
+   "label": "Consent Type",
+   "options": "Email Updates\nSMS Updates\nWhatsApp Updates\nPrivacy Policy Acceptance\nTerms Acceptance\nPAN Declaration\nTax Certificate Consent\nData Correction Request",
+   "reqd": 1
+  },
+  {
+   "fieldname": "consent_status",
+   "fieldtype": "Select",
+   "label": "Consent Status",
+   "options": "Granted\nWithdrawn\nPending",
+   "reqd": 1
+  },
+  {
+   "fieldname": "source",
+   "fieldtype": "Select",
+   "label": "Source",
+   "options": "Website\nDonor Portal\nAdmin Entry\nImport\nAPI",
+   "reqd": 1
+  },
+  {
+   "fieldname": "source_url",
+   "fieldtype": "Data",
+   "label": "Source URL"
+  },
+  {
+   "fieldname": "consent_text_version",
+   "fieldtype": "Data",
+   "label": "Consent Text Version"
+  },
+  {
+   "fieldname": "ip_address",
+   "fieldtype": "Data",
+   "label": "IP Address"
+  },
+  {
+   "fieldname": "user_agent",
+   "fieldtype": "Small Text",
+   "label": "User Agent"
+  },
+  {
+   "fieldname": "related_doctype",
+   "fieldtype": "Link",
+   "label": "Related DocType",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "related_document",
+   "fieldtype": "Dynamic Link",
+   "label": "Related Document",
+   "options": "related_doctype"
+  },
+  {
+   "fieldname": "recorded_by",
+   "fieldtype": "Link",
+   "label": "Recorded By",
+   "options": "User"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "column_break_hsfs",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-03-25 22:42:30.697411",
+ "modified_by": "Administrator",
+ "module": "Handle Me",
+ "name": "Donor Consent Log",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NGO Admin",
+   "select": 1
+  },
+  {
+   "read": 1,
+   "role": "Accounts User",
+   "select": 1
+  },
+  {
+   "create": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Compliance Officer",
+   "select": 1,
+   "write": 1
+  },
+  {
+   "if_owner": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Donor"
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

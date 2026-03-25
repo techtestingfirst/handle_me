@@ -1,0 +1,270 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:full_name",
+ "creation": "2026-03-24 20:42:19.442206",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "full_name",
+  "status",
+  "email",
+  "emergency_contact_name",
+  "column_break_znzi",
+  "volunteer_id",
+  "gender",
+  "mobile",
+  "emergency_contact_phone",
+  "date_of_birth",
+  "section_break_hnqe",
+  "skills_data",
+  "section_break_lexp",
+  "address_line_1",
+  "city",
+  "pincode",
+  "column_break_uyok",
+  "address_line_2",
+  "state",
+  "country",
+  "section_break_mzzz",
+  "skills",
+  "onboarding_date",
+  "volunteer_agreement_signed",
+  "column_break_szrm",
+  "availability",
+  "preferred_program",
+  "branch",
+  "background_check_status",
+  "id_proof",
+  "section_break_fizo",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Full Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "volunteer_id",
+   "fieldtype": "Data",
+   "label": "Volunteer ID"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Applicant\nActive\nInactive\nSuspended\nExited",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "mobile",
+   "fieldtype": "Phone",
+   "label": "Mobile"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "Male\nFemale\nOther\nPrefer Not to Say"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "emergency_contact_name",
+   "fieldtype": "Data",
+   "label": "Emergency Contact Name"
+  },
+  {
+   "fieldname": "emergency_contact_phone",
+   "fieldtype": "Phone",
+   "label": "Emergency Contact Phone"
+  },
+  {
+   "fieldname": "section_break_lexp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "address_line_1",
+   "fieldtype": "Data",
+   "label": "Address Line 1"
+  },
+  {
+   "fieldname": "address_line_2",
+   "fieldtype": "Data",
+   "label": "Address Line 2"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State"
+  },
+  {
+   "fieldname": "pincode",
+   "fieldtype": "Data",
+   "label": "Pincode"
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "label": "Country",
+   "options": "Country"
+  },
+  {
+   "fieldname": "column_break_uyok",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_znzi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_mzzz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "skills",
+   "fieldtype": "Small Text",
+   "label": "Skills"
+  },
+  {
+   "fieldname": "availability",
+   "fieldtype": "Select",
+   "label": "Availability",
+   "options": "Weekdays\nWeekends\nEvenings\nFull Time\nOn Call"
+  },
+  {
+   "fieldname": "preferred_program",
+   "fieldtype": "Link",
+   "label": "Preferred Program",
+   "options": "NGO Program"
+  },
+  {
+   "fieldname": "column_break_szrm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "NGO Branch"
+  },
+  {
+   "fieldname": "onboarding_date",
+   "fieldtype": "Date",
+   "label": "Onboarding Date"
+  },
+  {
+   "fieldname": "background_check_status",
+   "fieldtype": "Select",
+   "label": "Background Check Status",
+   "options": "Not Required\nPending\nVerified\nRejected"
+  },
+  {
+   "default": "0",
+   "fieldname": "volunteer_agreement_signed",
+   "fieldtype": "Check",
+   "label": "Volunteer Agreement Signed"
+  },
+  {
+   "fieldname": "id_proof",
+   "fieldtype": "Attach",
+   "label": "ID Proof"
+  },
+  {
+   "fieldname": "section_break_fizo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "description": "Internal notes",
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "section_break_hnqe",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "skills_data",
+   "fieldtype": "Table",
+   "label": "Skills Data",
+   "options": "Volunteer Skill Row"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-03-25 21:43:55.747620",
+ "modified_by": "Administrator",
+ "module": "Handle Me",
+ "name": "HM Volunteer",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NGO Admin",
+   "select": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Accounts User",
+   "select": 1
+  },
+  {
+   "create": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Program Manager",
+   "select": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Compliance Officer",
+   "select": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

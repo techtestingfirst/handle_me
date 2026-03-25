@@ -1,0 +1,244 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-03-24 19:57:19.284472",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "application_date",
+  "grantor",
+  "requested_amount",
+  "application_type",
+  "column_break_zokr",
+  "program",
+  "branch",
+  "title",
+  "currency",
+  "section_break_sbgr",
+  "milestones",
+  "section_break_syib",
+  "proposal_summary",
+  "section_break_kowg",
+  "start_date",
+  "contact_person",
+  "expected_decision_date",
+  "budget_file",
+  "column_break_uath",
+  "end_date",
+  "status",
+  "submitted_by",
+  "proposal_file",
+  "section_break_demh",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Naming Series",
+   "options": "GA-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "application_date",
+   "fieldtype": "Date",
+   "label": "Application Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "grantor",
+   "fieldtype": "Link",
+   "label": "Grantor",
+   "options": "Grantor",
+   "reqd": 1
+  },
+  {
+   "fieldname": "program",
+   "fieldtype": "Link",
+   "label": "Program",
+   "options": "NGO Program",
+   "reqd": 1
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "NGO Branch",
+   "reqd": 1
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "requested_amount",
+   "fieldtype": "Currency",
+   "label": "Requested Amount",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "default": "INR",
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "application_type",
+   "fieldtype": "Select",
+   "label": "Application Type",
+   "options": "CSR\nFoundation\nGovernment\nInternational\nEmergency\nRecurring",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_syib",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "proposal_summary",
+   "fieldtype": "Text Editor",
+   "label": "Proposal Summary"
+  },
+  {
+   "fieldname": "section_break_kowg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "contact_person",
+   "fieldtype": "Data",
+   "label": "Contact Person"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nSubmitted\nUnder Review\nClarification Requested\nApproved\nRejected\nWithdrawn",
+   "reqd": 1
+  },
+  {
+   "fieldname": "proposal_file",
+   "fieldtype": "Attach",
+   "label": "Proposal File"
+  },
+  {
+   "fieldname": "budget_file",
+   "fieldtype": "Attach",
+   "label": "Budget File"
+  },
+  {
+   "fieldname": "submitted_by",
+   "fieldtype": "Link",
+   "label": "Submitted By",
+   "options": "User"
+  },
+  {
+   "fieldname": "expected_decision_date",
+   "fieldtype": "Date",
+   "label": "Expected Decision Date"
+  },
+  {
+   "fieldname": "section_break_demh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "description": "Internal notes",
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "column_break_zokr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_uath",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_sbgr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "milestones",
+   "fieldtype": "Table",
+   "label": "Milestones",
+   "options": "Grant Milestone"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-03-25 22:09:08.785268",
+ "modified_by": "Administrator",
+ "module": "Handle Me",
+ "name": "HM Grant Application",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NGO Admin",
+   "select": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Accounts User",
+   "select": 1
+  },
+  {
+   "create": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Program Manager",
+   "select": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Compliance Officer",
+   "select": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

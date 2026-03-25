@@ -14,6 +14,8 @@
   "acknowledgement_no",
   "due_date",
   "filing_date",
+  "section_break_xdgx",
+  "annual_return_rows",
   "section_break_kmgt",
   "nil_return",
   "total_foreign_receipts",
@@ -156,12 +158,22 @@
   {
    "fieldname": "column_break_fsqn",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_xdgx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "annual_return_rows",
+   "fieldtype": "Table",
+   "label": "Annual Return Rows",
+   "options": "FCRA Annual Return Row"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-03-23 22:57:32.176886",
+ "modified": "2026-03-25 22:30:58.768984",
  "modified_by": "Administrator",
  "module": "Handle Me",
  "name": "FCRA Return Batch",
@@ -178,6 +190,32 @@
    "report": 1,
    "role": "System Manager",
    "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NGO Admin",
+   "select": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "report": 1,
+   "role": "Accounts User",
+   "select": 1
+  },
+  {
+   "create": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Compliance Officer",
+   "select": 1,
    "write": 1
   }
  ],
