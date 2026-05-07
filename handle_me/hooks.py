@@ -128,6 +128,16 @@ app_license = "mit"
 # 	"Event": "frappe.desk.doctype.event.event.has_permission",
 # }
 
+doc_events = {
+    "Donation Receipt": {
+        "validate": "handle_me.events.donor_sync.populate_donation_receipt"
+    },
+    "Donation Certificate": {
+        "validate": "handle_me.events.donor_sync.populate_donation_certificate"
+    }
+}
+# apps/handle_me/handle_me/hooks.py
+get_website_user_home_page = "handle_me.utils.get_website_user_home_page"
 permission_query_conditions = {
     "NGO Donor Profile": "handle_me.permissions.donor_permissions.ngo_donor_profile_query",
     "Donation Intent": "handle_me.permissions.donor_permissions.donation_intent_query",
@@ -268,4 +278,3 @@ export_python_type_annotations = True
 # ------------
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
-

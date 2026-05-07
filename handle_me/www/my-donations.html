@@ -1,0 +1,106 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+{% set s = summary or {} %}
+
+<div class="container my-5">
+  <div class="row mb-4">
+    <div class="col-12">
+      <h1 class="mb-2">My Donations</h1>
+      <p class="text-muted mb-0">{{ s.get("full_name") or frappe.session.user }}</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-7 mb-4">
+      <div class="card p-4">
+        <h3 class="mb-3">Donation History</h3>
+
+        {% if donations %}
+        <div class="table-responsive">
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Date</th>
+                <th>Amount</th>
+                <th>Mode</th>
+                <th>Payment Ref</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for d in donations %}
+              <tr>
+                <td>{{ d.name }}</td>
+                <td>{{ d.get("date") or "-" }}</td>
+                <td>{{ d.get("amount") or "-" }}</td>
+                <td>{{ d.get("mode_of_payment") or "-" }}</td>
+                <td>{{ d.get("payment_id") or "-" }}</td>
+                <td>{{ d.get("docstatus") }}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+        {% else %}
+        <p class="text-muted mb-0">No donations found.</p>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="col-md-5 mb-4">
+      <div class="card p-4 mb-4">
+        <h3 class="mb-3">Receipts</h3>
+
+        {% if receipts %}
+        <ul class="list-group list-group-flush">
+          {% for r in receipts %}
+          <li class="list-group-item px-0">
+            <div class="mb-2">
+              <strong>{{ r.name }}</strong><br>
+              <span class="text-muted small">
+                {{ r.get("receipt_date") or "-" }} · {{ r.get("amount") or "-" }} · {{ r.get("status") or "-" }}
+              </span>
+            </div>
+            {% if r.get("receipt_pdf") %}
+            <a href="{{ r.get('receipt_pdf') }}" class="btn btn-sm btn-outline-primary" target="_blank" rel="noopener noreferrer">Download</a>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+        {% else %}
+        <p class="text-muted mb-0">No receipts found.</p>
+        {% endif %}
+      </div>
+
+      <div class="card p-4">
+        <h3 class="mb-3">Certificates</h3>
+
+        {% if certificates %}
+        <ul class="list-group list-group-flush">
+          {% for c in certificates %}
+          <li class="list-group-item px-0">
+            <div class="mb-2">
+              <strong>{{ c.get("certificate_type") or c.name }}</strong><br>
+              <span class="text-muted small">
+                {{ c.get("financial_year") or "-" }} · {{ c.get("issue_date") or "-" }} · {{ c.get("status") or "-" }}
+              </span>
+            </div>
+            {% if c.get("donor_download_enabled") %}
+            <a href="/api/method/handle_me.api.donor_portal.download_my_certificate?certificate={{ c.name }}"
+               class="btn btn-sm btn-outline-success">
+              Download
+            </a>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+        {% else %}
+        <p class="text-muted mb-0">No certificates found.</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

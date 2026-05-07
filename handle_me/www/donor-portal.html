@@ -1,0 +1,146 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+{% set s = summary or {} %}
+
+<div class="container my-5">
+  <div class="row mb-4">
+    <div class="col-12">
+      <h1 class="mb-2">Donor Portal</h1>
+      <p class="text-muted mb-0">Welcome, {{ s.get("full_name") or frappe.session.user }}</p>
+    </div>
+  </div>
+
+  <div class="row mb-4">
+    <div class="col-md-4 mb-3">
+      <div class="card p-3">
+        <div class="text-muted small">Donor</div>
+        <div class="h5 mb-0">{{ s.get("full_name") or "-" }}</div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <div class="card p-3">
+        <div class="text-muted small">Email</div>
+        <div class="h5 mb-0">{{ s.get("email") or "-" }}</div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <div class="card p-3">
+        <div class="text-muted small">PAN</div>
+        <div class="h5 mb-0">{{ s.get("pan_number") or "-" }}</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-4">
+    <div class="col-md-4 mb-3">
+      <div class="card p-3">
+        <div class="text-muted small">Total Donations</div>
+        <div class="display-6 mb-0">{{ s.get("donation_count") or 0 }}</div>
+      </div>
+    </div>
+    <div class="col-md-8 mb-3">
+      <div class="card p-3 d-flex flex-row justify-content-between align-items-center">
+        <div>
+          <div class="text-muted small">Quick Access</div>
+          <div class="h5 mb-0">Donation history, receipts, and certificates</div>
+        </div>
+        <a href="/my-donations" class="btn btn-primary">Open My Donations</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12 mb-4">
+      <div class="card p-4">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h3 class="mb-0">Recent Donations</h3>
+          <a href="/my-donations" class="btn btn-outline-primary btn-sm">View All</a>
+        </div>
+
+        {% if s.get("recent_donations") %}
+        <div class="table-responsive">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Donation</th>
+                <th>Date</th>
+                <th>Amount</th>
+                <th>Mode</th>
+                <th>Payment Ref</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for d in s.get("recent_donations") %}
+              <tr>
+                <td>{{ d.name }}</td>
+                <td>{{ d.get("date") or "-" }}</td>
+                <td>{{ d.get("amount") or "-" }}</td>
+                <td>{{ d.get("mode_of_payment") or "-" }}</td>
+                <td>{{ d.get("payment_id") or "-" }}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+        {% else %}
+        <p class="text-muted mb-0">No donations found for this donor yet.</p>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="col-md-6 mb-4">
+      <div class="card p-4 h-100">
+        <h3 class="mb-3">Recent Receipts</h3>
+        {% if s.get("recent_receipts") %}
+        <ul class="list-group list-group-flush">
+          {% for r in s.get("recent_receipts") %}
+          <li class="list-group-item px-0 d-flex justify-content-between align-items-center">
+            <div>
+              <div><strong>{{ r.name }}</strong></div>
+              <div class="text-muted small">
+                {{ r.get("receipt_date") or "-" }} · {{ r.get("amount") or "-" }} · {{ r.get("status") or "-" }}
+              </div>
+            </div>
+            {% if r.get("receipt_pdf") %}
+            <a href="{{ r.get('receipt_pdf') }}" class="btn btn-sm btn-outline-primary" target="_blank" rel="noopener noreferrer">Download</a>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+        {% else %}
+        <p class="text-muted mb-0">No receipts available yet.</p>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="col-md-6 mb-4">
+      <div class="card p-4 h-100">
+        <h3 class="mb-3">Recent Certificates</h3>
+        {% if s.get("recent_certificates") %}
+        <ul class="list-group list-group-flush">
+          {% for c in s.get("recent_certificates") %}
+          <li class="list-group-item px-0 d-flex justify-content-between align-items-center">
+            <div>
+              <div><strong>{{ c.get("certificate_type") or c.name }}</strong></div>
+              <div class="text-muted small">
+                {{ c.get("financial_year") or "-" }} · {{ c.get("issue_date") or "-" }} · {{ c.get("status") or "-" }}
+              </div>
+            </div>
+            {% if c.get("donor_download_enabled") %}
+            <a href="/api/method/handle_me.api.donor_portal.download_my_certificate?certificate={{ c.name }}"
+               class="btn btn-sm btn-outline-success">
+              Download
+            </a>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+        {% else %}
+        <p class="text-muted mb-0">No certificates available yet.</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

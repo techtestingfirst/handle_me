@@ -2,7 +2,7 @@
  "actions": [],
  "allow_rename": 1,
  "autoname": "field:full_name",
- "creation": "2026-03-22 23:57:59.013270",
+ "creation": "2026-04-12 17:48:04.633583",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
@@ -57,6 +57,8 @@
    "reqd": 1
   },
   {
+   "fetch_from": "user.full_name",
+   "fetch_if_empty": 1,
    "fieldname": "full_name",
    "fieldtype": "Data",
    "label": "Full Name",
@@ -225,7 +227,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-03-25 21:36:42.452354",
+ "modified": "2026-04-20 19:35:17.424992",
  "modified_by": "Administrator",
  "module": "Handle Me",
  "name": "NGO Donor Profile",
