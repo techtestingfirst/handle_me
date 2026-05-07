@@ -1,3 +1,6 @@
+from frappe import _
+
+
 app_name = "handle_me"
 app_title = "Handle Me"
 app_publisher = "Praveen Kumar"
@@ -8,7 +11,7 @@ app_license = "mit"
 # Apps
 # ------------------
 
-# required_apps = []
+required_apps = ["erpnext"]
 
 # Each item in the list will be shown as an app in the apps page
 # add_to_apps_screen = [
@@ -47,7 +50,9 @@ app_license = "mit"
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
-
+doctype_js = {
+	"Sales Invoice": "public/js/payment_entry.js"
+}
 # Svg Icons
 # ------------------
 # include app icons in desk
@@ -87,6 +92,7 @@ app_license = "mit"
 
 # before_install = "handle_me.install.before_install"
 # after_install = "handle_me.install.after_install"
+after_install = "handle_me.setup.setup_non_profit"
 
 # Uninstallation
 # ------------
@@ -157,6 +163,10 @@ has_permission = {
     "Portal Access Log": "handle_me.permissions.donor_permissions.portal_access_log_has_permission",
     "Donor Communication Log": "handle_me.permissions.donor_permissions.donor_communication_log_has_permission",
 }
+
+override_doctype_class = {
+	"Payment Entry": "handle_me.handle_me.custom_doctype.payment_entry.NonProfitPaymentEntry",
+}
 # Document Events
 # ---------------
 # Hook on document methods and events
@@ -189,10 +199,16 @@ has_permission = {
 # 		"handle_me.tasks.monthly"
 # 	],
 # }
+scheduler_events = {
+	"daily": [
+		"handle_me.handle_me.doctype.membership.membership.set_expired_status",
+	],
+}
 
 # Testing
 # -------
 
+before_tests = "handle_me.handle_me.utils.before_tests"
 # before_tests = "handle_me.install.before_tests"
 
 # Extend DocType Class
@@ -278,3 +294,24 @@ export_python_type_annotations = True
 # ------------
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
+
+global_search_doctypes = {
+	"Handle Me": [
+		{'doctype': 'Certified Consultant', 'index': 1},
+		{'doctype': 'Certification Application', 'index': 2},
+		{'doctype': 'Volunteer', 'index': 3},
+		{'doctype': 'Membership', 'index': 4},
+		{'doctype': 'Member', 'index': 5},
+		{'doctype': 'Donor', 'index': 6},
+		{'doctype': 'Chapter', 'index': 7},
+		{'doctype': 'Grant Application', 'index': 8},
+		{'doctype': 'Volunteer Type', 'index': 9},
+		{'doctype': 'Donor Type', 'index': 10},
+		{'doctype': 'Membership Type', 'index': 11}
+	]
+}
+
+standard_portal_menu_items = [
+	{"title": _("Certification"), "route": "/certification",
+	 "reference_doctype": "Certification Application", "role": "Non Profit Portal User"},
+]
