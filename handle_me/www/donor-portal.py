@@ -1,11 +1,8 @@
-import frappe
-from handle_me.api.donor_portal import get_portal_summary
+from handle_me.api.donor_portal import get_portal_summary, redirect_guest_to_login
+
 
 def get_context(context):
-    if frappe.session.user == "Guest":
-        frappe.local.flags.redirect_location = "/login"
-        raise frappe.Redirect
-
+    redirect_guest_to_login()
     context.no_cache = 1
     context.title = "Donor Portal"
     context.summary = get_portal_summary()
